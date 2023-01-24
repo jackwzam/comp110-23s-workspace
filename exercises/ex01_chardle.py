@@ -32,6 +32,4 @@ if instances == 0:
 if instances == 1:
     print("1 instance of " + character + " found in " + word)
 if instances > 1:
-    print(str(instances)  + " instances of " + character + " found in " + word)
-
-
+    print(str(instances) + " instances of " + character + " found in " + word)
