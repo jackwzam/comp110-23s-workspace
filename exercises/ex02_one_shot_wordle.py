@@ -1,6 +1,6 @@
 """EX02 - One-Shot Worlde - Loops!"""
 
-___author___ = "730581165"
+__author__ = "730581165"
 
 SECRET: str = "python"
 guess: str = input(f"What is your {len(SECRET)}-letter guess? ")
@@ -16,8 +16,8 @@ boxes: str = ""
 
 while playing:
     if len(guess) != len(SECRET): 
-         guess = str(input(f"That was not {len(SECRET)} letters! Try again: ")) 
-    else: #length of word is 6 letters
+        guess = str(input(f"That was not {len(SECRET)} letters! Try again: ")) 
+    else:  # length of word is 6 letters
         while i < len(SECRET):
             if SECRET[i] == guess[i]: 
                 boxes = boxes + GREEN_BOX
@@ -25,7 +25,7 @@ while playing:
                 n: int = 0
                 found: bool = False
                 while found is False and n < len(SECRET):
-                    if guess[i] == SECRET[n]: #i is constant and n is changing
+                    if guess[i] == SECRET[n]:  # i is constant and n is changing
                         found = True
                     else:
                         n = n + 1
@@ -42,5 +42,3 @@ if guess == SECRET:
 else:
     print("Not quite. Play again soon. ")
     playing = False
-
-
