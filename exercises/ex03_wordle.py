@@ -15,7 +15,7 @@ def contains_char(word: str, char: str) -> bool:
         if char == word[i]:
             found = True
         else:
-            word_idx += 1
+            i += 1
     return found        
 
 def emojified(guess: str, secret: str) -> str:
