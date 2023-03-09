@@ -1,4 +1,3 @@
-"""Example function for unit 1"""
 
 def sum(xs: list[float]) -> float:
     """return sum off all elements in xs"""
@@ -6,4 +5,3 @@ def sum(xs: list[float]) -> float:
     for elem in range(0, len(xs)):
         sum_total += xs[elem]
     return sum_total
-        
