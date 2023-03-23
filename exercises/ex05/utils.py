@@ -35,6 +35,4 @@ def sub(original_list: list[int], start: int, end: int) -> list[int]:
         sub_list.append(original_list[start])
         start += 1
     return sub_list
-    # for elem in range(start + 1, end + 1):
-    #     sub_list.append(elem)
-    # return sub_list
+    
