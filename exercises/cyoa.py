@@ -60,7 +60,6 @@ def main() -> None:
     try_again()
 
 
-
 def greet() -> None:
     """Greets user and introduces the game."""
     global player
@@ -74,6 +73,7 @@ def greet() -> None:
     print("Well uhh...")
     print("Just be careful in your journey to retrieve the stolen plus swipes.")
     print("And good luck!")
+
 
 def phillips_probability() -> None:
     """Takes user to Phillips Hall to retrieve plus swipes and incoorporates randomness."""
@@ -89,6 +89,7 @@ def phillips_probability() -> None:
     print(f"The math guru hands you {dice_roll} plus swipes and vanishes.")
     print("There is a message on the chalk board behind where the math guru stood that directs you to either the top floor of Davis Library or Kenan Laboratory.")
 
+
 def the_pit() -> None:
     """Takes user to the pit to retrieve plus swipes."""
     print("You reach the pit and it is empty.")
@@ -97,6 +98,7 @@ def the_pit() -> None:
     global points
     points += 3
     print("The sign reads: You must travel to either the top floor of Davis Library or Kenan Laboratory.")
+
 
 def davis_library() -> None:
     """Takes user to Davis Library to retrieve plus swipes."""
@@ -109,7 +111,8 @@ def davis_library() -> None:
     print("Please take these plus swipes and be on your way. Watch out for the blue devil.")
     global points
     points += 4
-    
+
+
 def kenan_lab() -> None:
     """Takes user to Kenan Lab to find plus swipes."""
     print("You enter Kenan Laboratory and stumble across a mad scientist.")
@@ -128,6 +131,7 @@ def kenan_lab() -> None:
             print("You let him get away and continue searching Kenan Laboratory.")
             print("After several hours of searching you find nothing and leave the Laboratory.")
             response = True
+
 
 def kenan_stadium(num: int) -> int:
     print("You enter the stadium and see the evil devil standing in the middle of the field.")
@@ -151,6 +155,6 @@ def try_again() -> None:
     else:
         print("The End.")
 
+
 if __name__ == "__main__":
     main()
-#plus swipe tally: 21
