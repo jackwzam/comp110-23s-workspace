@@ -12,31 +12,31 @@ def main() -> None:
     """Main function that takes user through the entire experience."""
     global points
     global player
-    greet() #  enter greeting function and given introduction
+    greet()  # enter greeting function and given introduction
     print("There are three places you can check first: 1) Phillips Hall 2) The Pit 3) The Wilson Library Water Fountain.")
     first_location: int = int(input("Would you like to travel to destination 1, 2, or 3? "))
     location: bool = False 
-    while location is False: #  making sure a vaild response is entered
+    while location is False:  # making sure a vaild response is entered
         if 1 > first_location or first_location > 3:
             first_location = int(input("That was not a location you could travel to. Try again: "))
         if first_location == 1:
-            phillips_probability() #  enter phillips
+            phillips_probability()  # enter phillips
             print("You decide to first check the pit before checking the other places.")
             the_pit()
             location = True
         if first_location == 2:
-            the_pit() #  enter the pit
+            the_pit()  # enter the pit
             print("You decide to first check Phillips Hall before checking the other places.")
             phillips_probability()
             location = True
-        if first_location == 3: #  enter wilson library
+        if first_location == 3:  # enter wilson library
             print("You traveled to the Wilson Library Water Fountain but found no plus swipes. You drank some water from the fountain to hydrate for your journey and died of lead poisoning.")
             exit()
     print("There are two places you can travel to: 1) Davis Library 2) Kenan Laboratory")
     second_location: int = int(input("Would you like to travel to destination 1 or 2? "))
     location2: bool = False
-    while location2 is False: #  making sure a valid response is entered
-        if 1 > second_location or second_location > 2: #  invalid response has been entered
+    while location2 is False:  # making sure a valid response is entered
+        if 1 > second_location or second_location > 2:  # invalid response has been entered
             second_location = int(input("That was not a location you could travel to. Try again: "))
         if second_location == 1:
             davis_library()
@@ -82,7 +82,7 @@ def phillips_probability() -> None:
     print("The math guru hands you a die. He tells you that the he can only give you the number of plus swipes associated with the number you roll on the die, or he will be permanently banned from UNC basketball games.")
     global points
     import random
-    dice_roll: int = random.randint(1,6)
+    dice_roll: int = random.randint(1, 6)
     points += dice_roll
     dice_roll = str(dice_roll)
     print(f"You roll a {dice_roll}.")
@@ -120,7 +120,7 @@ def kenan_lab() -> None:
     response: bool = False
     choice: int = int(input("Do you 1) chase the mad scientist or 2) let him get away: "))
     while response is False:
-        if choice < 1 or choice > 2: #  invalid choice
+        if choice < 1 or choice > 2:  # invalid choice
             choice = int(input("That was not a valid choice. Try again: "))
         if choice == 1:
             print("You caught the mad scientist and found 7 plus swipes in his lab coat pocket.")
@@ -134,6 +134,7 @@ def kenan_lab() -> None:
 
 
 def kenan_stadium(num: int) -> int:
+    """Takes user to the final area to retrieve the remainder of the plus swipes."""
     print("You enter the stadium and see the evil devil standing in the middle of the field.")
     print(f"The evil devil looks at you and laughs. {NAMED_CONSTANT}")
     print("He then says, 'I see you have found the plus swipes I stole. In order to get the rest...you must defeat me in combat.")
@@ -145,6 +146,7 @@ def kenan_stadium(num: int) -> int:
 
 
 def try_again() -> None:
+    """Asks the user if they would like to play the game again."""
     answer: str = input("Would you like to play again? ")
     if answer == "yes":
         global points
