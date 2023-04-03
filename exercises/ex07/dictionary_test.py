@@ -16,14 +16,14 @@ def test_invert_1() -> None:
 
 def test_invert_2() -> None:
     """Tests that given a dictionary with three indexes, returns a new dictionary with reversed keys and values."""
-    test_dict: dict[str, str] = {"b": "a", "d" : "c", "f": "e"}
-    assert invert(test_dict) == {"a": "b", "c" : "d", "e": "f"}
+    test_dict: dict[str, str] = {"b": "a", "d": "c", "f": "e"}
+    assert invert(test_dict) == {"a": "b", "c": "d", "e": "f"}
 
 
 def test_invert_3() -> None:
     """Tests that given a dictionary with number as keys and items as values, returns a dictionary with items as keys and numbers as values."""
-    test_dict: dict[str, str] = {"7": "apples", "12" : "eggs"}
-    assert invert(test_dict) == {"apples": "7", "eggs" : "12"}
+    test_dict: dict[str, str] = {"7": "apples", "12": "eggs"}
+    assert invert(test_dict) == {"apples": "7", "eggs": "12"}
 
 
 def test_favorite_color_1() -> None:

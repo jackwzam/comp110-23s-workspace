@@ -2,6 +2,7 @@
 
 __author__ = "730581165"
 
+
 def invert(inp_dict: dict[str, str]) -> dict[str, str]:
     """Given a dictionary and reverses the keys and values."""
     ret_dict: dict[str, str] = {}
@@ -11,7 +12,6 @@ def invert(inp_dict: dict[str, str]) -> dict[str, str]:
         else:
             ret_dict[inp_dict[elem]] = elem
     return ret_dict
-
 
 
 def favorite_color(inp_dict: dict[str, str]) -> str:
@@ -30,7 +30,6 @@ def favorite_color(inp_dict: dict[str, str]) -> str:
             favorite_color = elem
     return favorite_color
     
-
 
 def count(inp_list: list[str]) -> dict[str, int]:
     """Given a list of strings and returns a dictionary of how frequently each string appeared."""
